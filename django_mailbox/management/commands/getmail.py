@@ -28,8 +28,7 @@ class Command(BaseCommand):
                     message.subject,
                     message.from_address
                 )
-
-             print(message.text)
+                
              if "unsubscribe" in message.text:
                  logger.info("Unsubscribing from %s", message.from_address)
                  message.delete()
